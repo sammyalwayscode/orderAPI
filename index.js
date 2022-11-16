@@ -1,11 +1,13 @@
 const express = require("express");
 const orderRouter = require("./router/orderRouter");
+const cors = require("cors");
 require("dotenv").config();
 require("./config/db");
 
 const PORT = process.env.PORT || 3003;
 const app = express();
 
+app.use(cors({ origin: "*" }));
 app.set("view engine", "ejs");
 app.use(express.json());
 app.get("/", (req, res) => {
