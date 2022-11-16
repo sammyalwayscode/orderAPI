@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const orderModel = mongoose.Schema(
+const preOrderModel = mongoose.Schema(
   {
     name: {
       type: String,
@@ -18,5 +18,5 @@ const orderModel = mongoose.Schema(
   { timestamps: true }
 );
 
-const products = mongoose.model("orders", orderModel);
+const products = mongoose.model("preOrders", preOrderModel);
 module.exports = products;
